@@ -47,7 +47,7 @@ p { max-width: 62ch; font-family: "Roboto", sans-serif; }
 }
 .logo { display: inline-flex; align-items: center; gap: 10px; font-weight: 600; font-size: 1.1rem; }
 
-.logo img { height: 60px; width: auto; }
+.logo img { height: 70px; width: auto; }
 
 .logo-mark {
   display: grid; place-items: center; width: 30px; height: 30px;
@@ -213,7 +213,7 @@ p { max-width: 62ch; font-family: "Roboto", sans-serif; }
 @media (max-width: 600px) {
   .logo img { height: 50px; }
   .grid-4, .steps { grid-template-columns: 1fr; }
-  .hero { min-height: 460px; padding-top: 120px; }
+  .hero { min-height: 660px; padding-top: 40px; }
   .hero-pills { grid-template-columns: 1fr; margin-top: 32px; }
   .section { padding-block: 60px; }
 }
