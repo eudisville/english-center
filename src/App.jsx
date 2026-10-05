@@ -2,6 +2,10 @@ import { useState } from "react";
 import "./App.css";
 import Logo from "./assets/BEC Type.png"
 import LogoFooter from "./assets/BEC Footer.png"
+import Student from './assets/student.jpg'
+import Worker from './assets/worker.jpg'
+import CEO from './assets/ceo.jpg'
+import Company from './assets/company.jpg'
 
 /* Remplacez par vos photos (ex. "/images/hero.jpg"). Vide = fond dégradé. */
 const HERO_IMG = "";
@@ -30,10 +34,26 @@ const COURSES = [
 ];
 
 const AUDIENCES = [
-  ["Étudiants", "Développer leur anglais pour les études et les opportunités internationales."],
-  ["Professionnels", "Communiquer avec plus d’aisance dans un environnement professionnel."],
-  ["Entrepreneurs", "Être à l’aise avec des clients, partenaires et opportunités internationales."],
-  ["Entreprises", "Développer les compétences linguistiques de leurs équipes."],
+  [
+    "Étudiants",
+    "Développer leur anglais pour les études et les opportunités internationales.",
+    Student
+  ],
+  [
+    "Professionnels",
+    "Communiquer avec plus d’aisance dans un environnement professionnel.",
+    Worker
+  ],
+  [
+    "Entrepreneurs",
+    "Être à l’aise avec des clients, partenaires et opportunités internationales.",
+    CEO
+  ],
+  [
+    "Entreprises",
+    "Développer les compétences linguistiques de leurs équipes.",
+    Company
+  ]
 ];
 
 const STEPS = [
@@ -191,9 +211,11 @@ export default function App() {
             <h2>Une formation pour chaque profil</h2>
           </div>
           <div className="grid-4">
-            {AUDIENCES.map(([title, text]) => (
+            {AUDIENCES.map(([title, text, imageSrc]) => (
               <article key={title} className="card card-white audience">
-                <div className="ph" />
+                <div className="ph">
+                  <img src={imageSrc} alt={title} className="audience-img" />
+                </div>
                 <h3>{title}</h3>
                 <p>{text}</p>
               </article>
@@ -304,10 +326,10 @@ export default function App() {
           </nav>
           <div className="socials">
             <a href="https://wa.me/00000000000">WhatsApp</a>
-            <a href="mailto:hello@beriverse.com">contact@beriverse.com</a>
+            <a href="mailto:hello@beriverse.com">hello@beriverse.com</a>
             <a href="#">Facebook</a>
-            <a href="#">Instagram</a>
-            <a href="#">LinkedIn</a>
+            <a href="https://www.tiktok.com/@beriverse.ec?lang=fr">TikTok</a>
+            <a href="https://www.linkedin.com/company/beriverse-en/posts/?viewAsMember=true">LinkedIn</a>
           </div>
         </div>
         <p className="copy">© {new Date().getFullYear()} Beriverse English Center</p>

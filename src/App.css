@@ -149,7 +149,18 @@ p { max-width: 62ch; font-family: "Roboto", sans-serif; }
 .course { transition: background 0.2s; }
 .course:hover { background: #eef5dc; }
 
-.audience .ph { min-height: 130px; flex: none; }
+.audience .ph {
+  height: 140px;          /* Hauteur fixe pour que toutes les cartes soient uniformes */
+  min-height: 140px;
+  overflow: hidden;       /* Empêche l'image de dépasser du cadre arrondi */
+}
+
+.audience-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;      /* Adapte l'image parfaitement sans la déformer */
+  display: block;
+}
 
 /* ---------- Méthode ---------- */
 .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; position: relative; }
